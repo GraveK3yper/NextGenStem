@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- 
+Group Members: Jerald Fisher, Adrian Stevenson, Henoch Totou, Alecia Williams
+Date: 10/28/2025
+File Name: scholarships.html
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scholarships | NextGen STEM Leaders</title>
+
+  <!-- Bootstrap CSS framework for layout and components -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <!-- Custom site stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- jQuery and Bootstrap JS for interactive behavior -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Site favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+  <!-- Page header with screen-reader-only title for accessibility -->
+  <header>
+    <h2 class="sr-only">Scholarships - NextGen STEM Leaders</h2>
+  </header>
+
+  <!-- Main navigation bar shared across the site -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Navbar header with brand logo and mobile toggle button -->
+      <div class="navbar-header">
+        <!-- Collapsible hamburger menu for small screens -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- Brand logo linking back to the home page -->
+        <a class="navbar-brand" href="index.html">Logo</a>
+      </div>
+
+      <!-- Collapsible navigation links section -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <!-- Primary navigation links; Scholarships is the active page -->
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="scholarships.html">Scholarships</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="mentors.html">Mentors</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Right-aligned login link -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content area for the Scholarships page -->
+  <main>
+    <!-- Scholarships section with overview text and scholarship cards -->
+    <section class="container text-center" id="scholarships">
+      <h2>Scholarship Opportunities</h2>
+      <!-- Introductory description of the scholarship section -->
+      <p>
+        Explore STEM-focused scholarships that can help students pursue education and careers
+        in science, technology, engineering, and math.
+      </p>
+
+      <!-- Row of three scholarship articles displayed as columns -->
+      <section class="row">
+        <!-- First scholarship card -->
+        <article class="col-sm-4">
+          <!-- Scholarship image and description grouped using figure/figcaption -->
+          <figure class="scholarship-figure">
+            <img src="images/NexGenSTEMLeadersimage4.jpg"
+                 alt="STEM Future Leaders Scholarship"
+                 class="img-responsive center-block">
+            <figcaption>
+              <h4>STEM Future Leaders Scholarship</h4>
+              <p>
+                Awarded annually to students showing exceptional promise in STEM fields.
+                Open to high school juniors and seniors.
+              </p>
+            </figcaption>
+          </figure>
+          <!-- External link to apply for this scholarship -->
+          <a href="https://www.scholarships.com"
+             target="_blank"
+             class="btn btn-primary">
+            Apply Now
+          </a>
+        </article>
+
+        <!-- Second scholarship card -->
+        <article class="col-sm-4">
+          <figure class="scholarship-figure">
+            <img src="images/NexGenSTEMLeadersTechnologyimage.png"
+                 alt="Women in Tech Grant"
+                 class="img-responsive center-block">
+            <figcaption>
+              <h4>Women in Tech Grant</h4>
+              <p>
+                Encourages young women to pursue careers in computer science and engineering.
+                Open to undergraduate students.
+              </p>
+            </figcaption>
+          </figure>
+          <!-- External link to apply for this scholarship -->
+          <a href="https://www.scholarships.com"
+             target="_blank"
+             class="btn btn-primary">
+            Apply Now
+          </a>
+        </article>
+
+        <!-- Third scholarship card -->
+        <article class="col-sm-4">
+          <figure class="scholarship-figure">
+            <img src="images/NexGenSTEMLeadersimage5.jpg"
+                 alt="Minority Innovators Award"
+                 class="img-responsive center-block">
+            <figcaption>
+              <h4>Minority Innovators Award</h4>
+              <p>
+                Supports underrepresented students in STEM disciplines who demonstrate
+                leadership and innovation in their community.
+              </p>
+            </figcaption>
+          </figure>
+          <!-- External link to apply for this scholarship -->
+          <a href="https://www.scholarships.com"
+             target="_blank"
+             class="btn btn-primary">
+            Apply Now
+          </a>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <!-- Global footer with contact email and NC A&T link -->
+  <footer>
+    <p>NextGen STEM Leaders</p>
+    <p><a href="mailto:info@NextGen.com" style="color:white;">info@NextGen.com</a></p>
+    <p><a href="https://www.ncat.edu/" style="color:white;">North Carolina A&amp;T</a></p>
+  </footer>
+</body>
+</html>

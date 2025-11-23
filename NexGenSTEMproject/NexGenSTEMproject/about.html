@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- 
+Group Members: Jerald Fisher, Adrian Stevenson, Henoch Totou, Alecia Williams
+Date: 10/28/2025
+File Name: about.html
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | NextGen STEM Leaders</title>
+
+  <!-- Bootstrap core CSS for layout and components -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <!-- Custom site wide stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- jQuery and Bootstrap JavaScript for interactive components -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Site favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+  <!-- Page header with screen reader only title for accessibility -->
+  <header>
+    <h2 class="sr-only">About NextGen STEM Leaders</h2>
+  </header>
+
+  <!-- Main navigation bar shared across the site -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Mobile friendly navbar header and brand logo link -->
+      <div class="navbar-header">
+        <!-- Collapsed hamburger menu button for small screens -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- Brand logo that links back to the home page -->
+        <a class="navbar-brand" href="index.html">Logo</a>
+      </div>
+      <!-- Collapsible navigation links section -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <!-- Primary site navigation links -->
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="scholarships.html">Scholarships</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="mentors.html">Mentors</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <!-- Active page indicator for About -->
+          <li class="active"><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Right aligned login link -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main page content area -->
+  <main>
+    <!-- About section with intro text and promotional video -->
+    <section id="aboutmainsection" class="container text-center">
+      <h2>About NextGen STEM Leaders</h2>
+      <!-- Brief description of the NextGen initiative -->
+      <p>
+        NextGen is a place where students are shown the tools to grow STEM skills,
+        build community, and develop leadership.
+      </p>
+      <!-- Embedded campus tour video with captions and descriptions -->
+      <video class="about-video" controls
+             poster="images/NexGenSTEMLeadersAboutimage.png">
+        <!-- MP4 source for broad browser support -->
+        <source src="media/nextgen-campus-tour.mp4" type="video/mp4">
+        <!-- WebM source as an alternative format -->
+        <source src="media/nextgen-campus-tour.webm" type="video/webm">
+
+        <!-- Closed captions track for accessibility -->
+        <track kind="captions"
+               src="media/nextgen-captions.vtt"
+               srclang="en"
+               label="English captions"
+               default>
+        <!-- Audio descriptions track for visually impaired users -->
+        <track kind="descriptions"
+               src="media/nextgen-descriptions.vtt"
+               srclang="en"
+               label="English descriptions">
+
+        <!-- Fallback message and direct download link if video is not supported -->
+        Sorry, your browser does not support embedded video.
+        You can <a href="media/nextgen-campus-tour.mp4">download the video here</a>.
+      </video>
+    </section>
+
+    <!-- Target audience section describing who the initiative is for -->
+    <section class="container text-center">
+      <h2>The initiative target audience is:</h2>
+      <!-- List of student groups served by the initiative -->
+      <ul class="audience-list">
+        <li>Elementary school students</li>
+        <li>Middle school students</li>
+        <li>High school students</li>
+      </ul>
+      <!-- External link to learn more about STEM -->
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Science,_technology,_engineering,_and_mathematics"
+           target="_blank">
+          Know more about STEM
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Global site footer with contact information and institutional link -->
+  <footer>
+    <p>NextGen STEM Leaders</p>
+    <p><a href="mailto:info@NextGen.com" style="color:white;">info@NextGen.com</a></p>
+    <p><a href="https://www.ncat.edu/" style="color:white;">North Carolina A&T</a></p>
+  </footer>
+</body>
+</html>
