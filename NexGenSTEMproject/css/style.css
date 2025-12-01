@@ -1,0 +1,579 @@
+/* 
+Group Members: Jerald Fisher, Adrian Stevenson, Henoch Totou, Alecia Williams
+Date: 12/01/2025
+File Name: style.css
+*/
+
+/* ============================================================
+   ========== CSS RESET ==========
+   Purpose: Remove default browser styles for consistency
+============================================================ */
+html,
+body,
+header,
+nav,
+main,
+footer,
+section,
+article,
+aside,
+figure,
+figcaption,
+audio,
+video,
+table,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   ========== GOOGLE FONTS ==========
+   Purpose: Import custom fonts (Poppins + Open Sans)
+============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap');
+
+/* ============================================================
+   ========== GLOBAL STYLES ==========
+   Purpose: Apply consistent typography, layout, and color
+============================================================ */
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to bottom, #f7f7f7, #e4ebf9);
+    /* Gradient background */
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Headings use Poppins for visual hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+    color: #003366;
+}
+
+/* Soft text shadow for main section headings */
+h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+/* Anchor links styling */
+a {
+    text-decoration: none;
+    color: #0056b3;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: #002855;
+}
+
+/* ============================================================
+   ========== Content Skipping Styles ==========
+   Purpose: Ensure accessabilty and neatness among users
+============================================================ */
+.skip-link {
+    /* Moves the link off the visible screen area */
+    position: absolute;
+    top: -40px;
+    left: 0;
+
+    /* Ensure it is readable when it appears */
+    background-color: #ff6600;
+    color: white;
+    padding: 8px;
+    z-index: 1000;
+    /* Ensures it appears above the navigation bar */
+}
+
+/* Make it visible when the user presses 'Tab' and the link gets focus */
+.skip-link:focus {
+    top: 0;
+    /* Brings the link back onto the screen */
+}
+
+
+
+/* ============================================================
+   ========== RESPONSIVE IMAGE AND VIDEO STYLES ==========
+   Purpose: Ensure all video and images resize properly on any device
+============================================================ */
+img,
+video {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 8px;
+    /* Rounded corners for images */
+}
+
+/* Standardized audio player width across pages */
+audio {
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+    max-width: 400px;
+    /* adjust if you want wider */
+}
+
+/* 1. Give the jumbotron a custom color and font */
+.custom-jumbo {
+    background-color: #e8f4ff;
+    color: #003366;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+/* 2. Footer styling */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 3. Custom hover effect on cards/images */
+.img-hover:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+/* Next 3 classes to make images not go over text */
+/* keeps the zoomed image inside the box */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.img-container img {
+    transition: transform 0.3s ease;
+}
+
+/* enlarges but stays inside container */
+.img-container img:hover {
+    transform: scale(0.8);
+}
+
+/* to bolden the courses selection */
+.bold-text {
+    font-weight: bold;
+}
+
+/* ============================================================
+   ========== FOOTER STYLES ==========
+   Purpose: Style footer with gradient and accessible links
+============================================================ */
+footer {
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    border-radius: 10px 10px 0 0;
+    /* Rounded top corners */
+
+}
+
+.inner-foot-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    /* NOW APPLYING FLEXBOX HERE */
+    justify-content: space-between;
+    /* Spreads the three main columns (copyright, resources, social) */
+
+    padding: 10px 0;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+footer .copyright {
+    color: white;
+    padding: 25px;
+    text-align: left;
+}
+
+footer .social {
+    color: white;
+    text-align: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    /* Ensures icons are side-by-side */
+    align-items: center;
+}
+
+footer .resources {
+    text-align: center;
+}
+
+footer .social,
+img:hover {
+    transform: scale(1.2);
+    /* Slight growth on hover */
+}
+
+/* ============================================================
+   ========== MOBILE STYLES ==========
+   (Max width: 600px)
+   Purpose: Optimize layout for smartphones
+============================================================ */
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    main {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    img {
+        margin: 10px auto;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    .inner-foot-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    .inner-foot-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-copyright,
+    .footer-resources {
+        text-align: center !important;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer-social {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        order: 1;
+    }
+
+    /* Locate the rule that styles the image inside the social container */
+    .social img {
+        height: 30px;
+        width: 30px;
+        max-width: 30px;
+        max-height: 30px;
+
+        /* CHANGE: Add a margin to create space between the images */
+        margin: 0 5px;
+
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    .social a {
+        margin: 0 5px;
+        /* Adds 5px space to the left and right of each link */
+        display: inline-block;
+        /* Essential if you are using margin on an anchor tag */
+    }
+}
+
+/* ============================================================
+   ========== TABLET STYLES ==========
+   (Width: 601px - 991px)
+   Purpose: Adjust spacing and layout for tablets
+============================================================ */
+@media (min-width: 601px) and (max-width: 991px) {
+    body {
+        background: linear-gradient(to bottom, #eaf2ff, #ffffff);
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    nav a:hover {
+        background-color: #004080;
+    }
+
+    .inner-foot-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .copyright,
+    .resources,
+    .social {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .social {
+        justify-content: center;
+        display: flex;
+        order: 1;
+        /* CHANGE: Add margin below the social section to separate it from links below */
+        margin-bottom: 20px;
+    }
+
+    /* ADD THIS NEW BLOCK: Constrain the logo size specifically for tablets */
+    .social img {
+        width: 40px;
+        /* Set a fixed small size */
+        height: 40px;
+        max-width: 40px;
+        /* Crucial: Prevents them from growing past this size */
+        max-height: 40px;
+        margin: 0 10px;
+        /* Add horizontal space between them */
+    }
+}
+
+/* ============================================================
+   ========== DESKTOP STYLES ==========
+   (Width: 992px - 1199px)
+   Purpose: Expand layout and enhance interactions
+============================================================ */
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        background: linear-gradient(to right, #f0f4ff, #ffffff);
+    }
+
+    main {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    nav a:hover {
+        background-color: #0074cc;
+        color: #fff;
+    }
+
+    .inner-foot-container {
+        /* Distribute the three columns across the width */
+        justify-content: space-between;
+        /* Vertically center the columns relative to each other */
+        align-items: center;
+    }
+
+    /* 1. Left Column */
+    .copyright {
+        text-align: left;
+        flex-basis: 33%;
+        align-self: center;
+    }
+
+    /* 2. Center Column (Social Icons) */
+    .social {
+        flex-basis: 33%;
+        align-self: center;
+        /* Ensure icons are centered and horizontal */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 3. Right Column */
+    .resources {
+        text-align: right;
+        flex-basis: 33%;
+        align-self: center;
+    }
+
+    /* Specific image sizing for the icons */
+    .social img {
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        margin: 0 10px;
+        /* Space between icons */
+    }
+
+    /* Text link formatting for the right column */
+    .resources a,
+    .resources p {
+        display: block;
+        margin: 0;
+    }
+
+    .footer a {
+        display: block;
+        text-align: right;
+    }
+}
+
+/* ============================================================
+   ========== LARGE DESKTOP STYLES ==========
+   (Min width: 1200px)
+   Purpose: Refine for widescreen monitors
+============================================================ */
+@media (min-width: 1200px) {
+    body {
+        background: linear-gradient(to right, #dde7ff, #ffffff);
+    }
+
+    main {
+        width: 70%;
+        margin: 40px auto;
+    }
+
+    /* Dynamic pseudo-class for hover on large screens */
+    .navbar-nav>li>a:hover {
+        background-color: #ff6600;
+        color: #fff;
+    }
+
+    .inner-foot-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    /* Set explicit alignment and size for the three columns */
+    .copyright {
+        /* Left alignment for the left column */
+        text-align: left;
+        flex-basis: 33%;
+    }
+
+    /* Center Column (Social Icons) */
+    .social {
+        /* Ensure content is horizontally centered within the middle column */
+        justify-content: center;
+        flex-basis: 33%;
+    }
+
+    /* Right Column (Resources) */
+    .resources {
+        /* Right alignment for the right column */
+        text-align: right;
+        flex-basis: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Ensure the social icons and their links are correctly styled */
+    .social,
+    .resources {
+        /* Reset any conflicting rule */
+        align-self: auto;
+    }
+
+    /* Ensure social icons are aligned horizontally */
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Final cleanup for the resources links */
+    .resources a,
+    .resources p {
+        display: block;
+        margin: 0;
+        /* Remove vertical margin causing misalignment */
+    }
+
+    .resources p {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 2. Ensure all three blocks are using the same alignment */
+    .copyright,
+    .social,
+    .resources {
+        align-self: center;
+    }
+
+    /* 3. Simplify the resources links */
+    .resources a {
+        display: block;
+        margin: 0;
+        padding: 0;
+        align-self: flex-end;
+    }
+
+    .social img {
+        /* Enforce a fixed size */
+        width: 32px !important;
+        height: 32px !important;
+
+        /* Ensure no element grows past this size */
+        max-width: 32px !important;
+        max-height: 32px !important;
+    }
+}
+
+/* ============================================================
+   ========== PRINT STYLES ==========
+   Purpose: Simplify layout and improve legibility when printing
+============================================================ */
+@media print {
+
+    nav,
+    footer {
+        display: none;
+    }
+
+    body {
+        color: #000;
+        background: #fff;
+        font-size: 12pt;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+    }
+}

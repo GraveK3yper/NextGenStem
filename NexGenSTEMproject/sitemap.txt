@@ -1,0 +1,10 @@
+http://www.exampledomain.com/index.html
+http://www.exampledomain.com/about.html
+http://www.exampledomain.com/courses.html
+http://www.exampledomain.com/mentors.html
+http://www.exampledomain.com/scholarships.html
+http://www.exampledomain.com/resources.html
+http://www.exampledomain.com/contact.html
+http://www.exampledomain.com/indexBP.html
+http://www.exampledomain.com/aboutBP.html
+http://www.exampledomain.com/resourcesBP.html

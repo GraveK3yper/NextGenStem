@@ -1,0 +1,1156 @@
+/* 
+Group Members: Jerald Fisher, Adrian Stevenson, Henoch Totou, Alecia Williams
+Date: 11/09/2025
+File Name: styles.css
+*/
+
+/* ============================================================
+   ========== CSS RESET ==========
+   Purpose: Remove default browser styles for consistency
+============================================================ */
+html,
+body,
+header,
+nav,
+main,
+footer,
+section,
+article,
+aside,
+figure,
+figcaption,
+audio,
+video,
+table,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   ========== GOOGLE FONTS ==========
+   Purpose: Import custom fonts (Poppins + Open Sans)
+============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap');
+
+/* ============================================================
+   ========== GLOBAL STYLES ==========
+   Purpose: Apply consistent typography, layout, and color
+============================================================ */
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(to bottom, #f7f7f7, #e4ebf9);
+  /* Gradient background */
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Headings use Poppins for visual hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  color: #003366;
+}
+
+/* Soft text shadow for main section headings */
+h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+/* Anchor links styling */
+a {
+  text-decoration: none;
+  color: #0056b3;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: #002855;
+}
+
+/* ============================================================
+   ========== Content Skipping Styles ==========
+   Purpose: Ensure accessabilty and neatness among users
+============================================================ */
+.skip-link {
+  /* Moves the link off the visible screen area */
+  position: absolute;
+  top: -40px;
+  left: 0;
+
+  /* Ensure it is readable when it appears */
+  background-color: #ff6600;
+  color: white;
+  padding: 8px;
+  z-index: 1000;
+  /* Ensures it appears above the navigation bar */
+}
+
+/* Make it visible when the user presses 'Tab' and the link gets focus */
+.skip-link:focus {
+  top: 0;
+  /* Brings the link back onto the screen */
+}
+
+
+
+/* ============================================================
+   ========== RESPONSIVE IMAGE AND VIDEO STYLES ==========
+   Purpose: Ensure all video and images resize properly on any device
+============================================================ */
+img,
+video {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 8px;
+  /* Rounded corners for images */
+}
+
+/* Standardized audio player width across pages */
+audio {
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+  max-width: 400px;
+  /* adjust if you want wider */
+}
+
+/* Smaller icon size used on STEM “What We Do” and Courses sections */
+.stem-icon {
+  max-width: 160px;
+  margin-bottom: 15px;
+}
+
+/* ============================================================
+   ========== HEADER STYLES ==========
+   Purpose: Set up site header and gradient background
+============================================================ */
+header {
+  background: linear-gradient(135deg, #004080, #002855);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  /* Rounded bottom corners */
+}
+
+/* ============================================================
+   ========== NAVIGATION STYLES ==========
+   Purpose: Define main navbar appearance and interactivity
+============================================================ */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  /* Remove bullets */
+}
+
+/* Navbar base styling */
+.navbar-inverse {
+  background-color: #333;
+  border-color: #222;
+  border-radius: 0;
+}
+
+/* Navbar brand (site logo text) */
+.navbar-inverse .navbar-brand {
+  color: #ffffff;
+  font-weight: 600;
+  font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #ffcc00;
+}
+
+/* Navbar links */
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  border-radius: 5px;
+  margin: 3px;
+  transition: background-color 0.3s ease;
+}
+
+/* Dynamic pseudo-classes (hover, focus) for accessibility */
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Active link indicator */
+.navbar-nav .active>a {
+  background-color: #0074cc !important;
+  color: #fff !important;
+  border-radius: 5px;
+}
+
+/* ============================================================
+   ========== STRUCTURAL PSEUDO-CLASSES ==========
+   Purpose: Add accents to first and last navigation items
+============================================================ */
+.navbar-nav li:first-child a {
+  border-left: 2px solid #ffcc00;
+}
+
+.navbar-nav li:last-child a {
+  border-right: 2px solid #ffcc00;
+}
+
+/* ============================================================
+   ========== MAIN CONTENT STYLES ==========
+   Purpose: Define structure and layout for main sections
+============================================================ */
+main {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+
+/* ============================================================
+   ========== Index page ==========
+============================================================ */
+.img-container p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* ============================================================
+   ========== SCHOLARSHIPS FIGURE STYLES ==========
+============================================================ */
+.scholarship-figure {
+  padding: 15px;
+  background-color: #f5f9ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  margin-bottom: 15px;
+}
+
+/* Space and center the image inside the figure */
+.scholarship-figure img {
+  margin: 0 auto 10px auto;
+  max-height: 220px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Tighten the figcaption text */
+.scholarship-figure figcaption h4 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* ============================================================
+   ========== MENTORS PAGE (GRID + CARDS) ==========
+============================================================ */
+
+/* Container for mentors page */
+#mentors {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Parent grid: rubric wants CSS Grid usage */
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Mentor cards – full-width, with soft shading */
+.mentor-card {
+  background-color: rgba(245, 249, 255, 0.98);
+  /* slightly stronger shade */
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+  /* deeper shadow */
+  grid-column: 1 / -1;
+  /* span both columns */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* photo + text */
+  column-gap: 18px;
+  align-items: flex-start;
+  text-align: left;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* Subtle hover lift for visual appeal */
+.mentor-card:hover {
+  box-shadow: 0 9px 24px rgba(0, 0, 0, 0.22);
+  transform: translateY(-2px);
+}
+
+/* Circular mentor photos */
+.mentor-headshot {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Tagline under each name */
+.mentor-tagline {
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+/* Pathway / field label under the job title */
+.mentor-field {
+  color: #555;
+  /* slightly muted */
+  font-weight: 400;
+  /* lighter than the job title line */
+  opacity: 0.9;
+}
+
+.mentor-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* On very small screens, stack as one column */
+@media (max-width: 600px) {
+  .mentor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keep featured-mentor explicitly spanning both columns */
+.featured-mentor {
+  grid-column: 1 / -1;
+}
+
+/* ============================================================
+   ========== STEM Courses Syntax ==========
+============================================================ */
+
+/* removes bullet points */
+/* removes default left indentation */
+ul.course-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* makes each item bold */
+/* optional spacing between items */
+ul.course-list li {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+/* ============================================================
+   ========== ABOUT PAGE (TWO-COLUMN LAYOUT) ==========
+============================================================ */
+#aboutmainsection {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+/* Class Selector Example */
+.highlight-text {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Improve text contrast */
+p,
+li {
+  color: #111;
+}
+
+/* Create responsive columns for text & image */
+#aboutmainsection .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#aboutmainsection .col-md-6 p {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Add rounded edges and subtle hover zoom */
+#aboutmainsection img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+#aboutmainsection img:hover {
+  transform: scale(1.03);
+}
+
+/* Remove bullets and tighten spacing for target-audience list */
+.audience-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 15px;
+}
+
+.audience-list li {
+  margin: 4px 0;
+}
+
+/* Center the About page video */
+#aboutmainsection .about-video {
+  display: block;
+  margin: 20px auto;
+  /* auto left/right centers it */
+  max-width: 900px;
+  /* or whatever width you like */
+  width: 100%;
+  /* scales on smaller screens */
+  border-radius: 10px;
+  /* optional: match your image style */
+}
+
+/* Tablet/Desktop Layout: Two columns */
+@media (min-width: 768px) {
+  #aboutmainsection .col-md-6 {
+    flex: 1 1 45%;
+  }
+}
+
+/* Mobile Layout: Stack content vertically */
+@media (max-width: 767px) {
+  #aboutmainsection .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #aboutmainsection .col-md-6 p {
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   ========== FOOTER STYLES ==========
+   Purpose: Style footer with gradient and accessible links
+============================================================ */
+footer {
+  background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  border-radius: 10px 10px 0 0;
+  /* Rounded top corners */
+
+}
+
+.inner-foot-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  /* NOW APPLYING FLEXBOX HERE */
+  justify-content: space-between;
+  /* Spreads the three main columns (copyright, resources, social) */
+
+  padding: 10px 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #ffcc00;
+}
+
+footer .copyright {
+  color: white;
+  padding: 25px;
+  text-align: left;
+}
+
+footer .social {
+  color: white;
+  text-align: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  /* Ensures icons are side-by-side */
+  align-items: center;
+}
+
+footer .resources {
+  text-align: center;
+}
+
+footer .social,
+img:hover {
+  transform: scale(1.2);
+  /* Slight growth on hover */
+}
+
+/* ============================================================
+   ========== CONTACT PAGE: TABLE + FORM ==========
+============================================================ */
+
+/* Main contact area container */
+#contact-main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Two-column layout: info/table on the left, form on the right */
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Card-style panels used on the contact page */
+.contact-card,
+.contact-form-card {
+  background-color: #f5f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex: 1 1 320px;
+  margin-bottom: 20px;
+}
+
+/* Wrapper so the table can scroll horizontally on small screens */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Program table styling */
+.program-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.program-table th,
+.program-table td {
+  padding: 8px 10px;
+  border: 1px solid #ccd4e0;
+  text-align: left;
+}
+
+.program-table th {
+  background-color: #004080;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.program-table tr:nth-child(even) {
+  background-color: #f0f4ff;
+}
+
+/* Contact form styling */
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+/* Highlight empty/invalid required fields using HTML5 validation */
+.contact-form input:required:invalid,
+.contact-form select:required:invalid,
+.contact-form textarea:required:invalid {
+  border-color: #c0392b;
+  box-shadow: 0 0 4px rgba(192, 57, 43, 0.4);
+}
+
+/* Mark valid required fields in green */
+.contact-form input:required:valid,
+.contact-form select:required:valid,
+.contact-form textarea:required:valid {
+  border-color: #2e7d32;
+}
+
+/* Keep radios/checkboxes inline with their labels */
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+.contact-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.contact-form .helper-text {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Submit button */
+.contact-form button[type="submit"] {
+  margin-top: 14px;
+  background-color: #0074cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.contact-form button[type="submit"]:hover,
+.contact-form button[type="submit"]:focus {
+  background-color: #005faa;
+}
+
+/* Scaled contact page banner image */
+.contact-banner img {
+  max-width: 350px;
+  /* smaller image */
+  width: 70%;
+  margin: 10px auto;
+  /* shrink vertical spacing */
+  display: block;
+}
+
+/* Intro paragraph at top of contact page */
+.contact-intro {
+  margin: 15px 0 25px;
+  text-align: center;
+  font-size: 1.05em;
+}
+
+/* ================== MENTOR HOURS (CONTACT PAGE) ================== */
+
+/* Desktop / tablet version: table */
+.mentor-hours-desktop {
+  margin: 40px auto 30px;
+}
+
+/* Basic table styling */
+.mentor-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.mentor-hours-table caption {
+  caption-side: top;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.mentor-hours-table th,
+.mentor-hours-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.mentor-hours-table th {
+  background-color: #f5f9ff;
+}
+
+/* Mobile cards version: hidden by default on larger screens */
+.mentor-hours-mobile {
+  display: none;
+  /* hide on desktop/tablet */
+  margin: 40px auto 20px;
+}
+
+.mentor-hours-card {
+  background-color: #f5f9ff;
+  border-radius: 10px;
+  padding: 15px 18px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Mentor hours table (Contact page) ===== */
+.mentor-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95em;
+}
+
+.mentor-hours-table caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #003366;
+}
+
+.mentor-hours-table th,
+.mentor-hours-table td {
+  padding: 8px 12px;
+  /* space between columns */
+  border-bottom: 1px solid #dde3f0;
+  text-align: left;
+}
+
+.mentor-hours-table th {
+  background-color: #f0f4ff;
+  font-weight: 600;
+}
+
+/* keep “Mentor” column from wrapping weirdly */
+.mentor-hours-table td:first-child {
+  white-space: nowrap;
+}
+
+/* “How to Join” links a bit bolder */
+.mentor-hours-table td:last-child a {
+  font-weight: 600;
+}
+
+/* ============================================================
+   ========== MOBILE STYLES ==========
+   (Max width: 600px)
+   Purpose: Optimize layout for smartphones
+============================================================ */
+
+@media (max-width: 600px) {
+  header {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  main {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  img {
+    margin: 10px auto;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 20px;
+  }
+
+  .inner-foot-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .inner-foot-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-copyright,
+  .footer-resources {
+    text-align: center !important;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .footer-social {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    order: 1;
+  }
+
+  /* Locate the rule that styles the image inside the social container */
+  .social img {
+    height: 30px;
+    width: 30px;
+    max-width: 30px;
+    max-height: 30px;
+
+    /* CHANGE: Add a margin to create space between the images */
+    margin: 0 5px;
+
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .social a {
+    margin: 0 5px;
+    /* Adds 5px space to the left and right of each link */
+    display: inline-block;
+    /* Essential if you are using margin on an anchor tag */
+  }
+
+  /* Stack mentor cards vertically, center photo on small screens */
+  .mentor-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .mentor-headshot {
+    margin: 0 auto 8px auto;
+  }
+
+  .mentor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact page tweaks for mobile */
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .contact-card,
+  .contact-form-card {
+    margin: 10px 0;
+  }
+
+  .program-table {
+    font-size: 0.85rem;
+  }
+
+  /* Show mentor cards, hide table on phones */
+  .mentor-hours-desktop {
+    display: none;
+  }
+
+  .mentor-hours-mobile {
+    display: block;
+  }
+}
+
+/* ============================================================
+   ========== TABLET STYLES ==========
+   (Width: 601px - 991px)
+   Purpose: Adjust spacing and layout for tablets
+============================================================ */
+@media (min-width: 601px) and (max-width: 991px) {
+  body {
+    background: linear-gradient(to bottom, #eaf2ff, #ffffff);
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  nav a:hover {
+    background-color: #004080;
+  }
+
+  .inner-foot-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .copyright,
+  .resources,
+  .social {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .social {
+    justify-content: center;
+    display: flex;
+    order: 1;
+    /* CHANGE: Add margin below the social section to separate it from links below */
+    margin-bottom: 20px;
+  }
+
+  /* ADD THIS NEW BLOCK: Constrain the logo size specifically for tablets */
+  .social img {
+    width: 40px;
+    /* Set a fixed small size */
+    height: 40px;
+    max-width: 40px;
+    /* Crucial: Prevents them from growing past this size */
+    max-height: 40px;
+    margin: 0 10px;
+    /* Add horizontal space between them */
+  }
+}
+
+/* ============================================================
+   ========== DESKTOP STYLES ==========
+   (Width: 992px - 1199px)
+   Purpose: Expand layout and enhance interactions
+============================================================ */
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background: linear-gradient(to right, #f0f4ff, #ffffff);
+  }
+
+  main {
+    width: 80%;
+    margin: 30px auto;
+    width: max-content;
+  }
+
+  nav a:hover {
+    background-color: #0074cc;
+    color: #fff;
+  }
+
+  .carousel-wrapper {
+    max-width: 900px;
+    /* choose your width */
+    margin: 0 auto;
+    /* centers the carousel */
+  }
+
+  .inner-foot-container {
+    /* Distribute the three columns across the width */
+    justify-content: space-between;
+    /* Vertically center the columns relative to each other */
+    align-items: center;
+  }
+
+  /* 1. Left Column */
+  .copyright {
+    text-align: left;
+    flex-basis: 33%;
+    align-self: center;
+  }
+
+  /* 2. Center Column (Social Icons) */
+  .social {
+    flex-basis: 33%;
+    align-self: center;
+    /* Ensure icons are centered and horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 3. Right Column */
+  .resources {
+    text-align: right;
+    flex-basis: 33%;
+    align-self: center;
+  }
+
+  /* Specific image sizing for the icons */
+  .social img {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    margin: 0 10px;
+    /* Space between icons */
+  }
+
+  /* Text link formatting for the right column */
+  .resources a,
+  .resources p {
+    display: block;
+    margin: 0;
+  }
+
+  .footer a {
+    display: block;
+    text-align: right;
+  }
+}
+
+/* ============================================================
+   ========== LARGE DESKTOP STYLES ==========
+   (Min width: 1200px)
+   Purpose: Refine for widescreen monitors
+============================================================ */
+@media (min-width: 1200px) {
+  body {
+    background: linear-gradient(to right, #dde7ff, #ffffff);
+  }
+
+  main {
+    width: 70%;
+    margin: 40px auto;
+    width: max-content;
+  }
+
+  /* Dynamic pseudo-class for hover on large screens */
+  .navbar-nav>li>a:hover {
+    background-color: #ff6600;
+    color: #fff;
+  }
+
+  .inner-foot-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  /* Set explicit alignment and size for the three columns */
+  .copyright {
+    /* Left alignment for the left column */
+    text-align: left;
+    flex-basis: 33%;
+  }
+
+  /* Center Column (Social Icons) */
+  .social {
+    /* Ensure content is horizontally centered within the middle column */
+    justify-content: center;
+    flex-basis: 33%;
+  }
+
+  /* Right Column (Resources) */
+  .resources {
+    /* Right alignment for the right column */
+    text-align: right;
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Ensure the social icons and their links are correctly styled */
+  .social,
+  .resources {
+    /* Reset any conflicting rule */
+    align-self: auto;
+  }
+
+  /* Ensure social icons are aligned horizontally */
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Final cleanup for the resources links */
+  .resources a,
+  .resources p {
+    display: block;
+    margin: 0;
+    /* Remove vertical margin causing misalignment */
+  }
+
+  .resources p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 2. Ensure all three blocks are using the same alignment */
+  .copyright,
+  .social,
+  .resources {
+    align-self: center;
+  }
+
+  /* 3. Simplify the resources links */
+  .resources a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
+  }
+
+  .social img {
+    /* Enforce a fixed size */
+    width: 32px !important;
+    height: 32px !important;
+
+    /* Ensure no element grows past this size */
+    max-width: 32px !important;
+    max-height: 32px !important;
+  }
+}
+
+/* ============================================================
+   ========== PRINT STYLES ==========
+   Purpose: Simplify layout and improve legibility when printing
+============================================================ */
+@media print {
+
+  nav,
+  footer {
+    display: none;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 12pt;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+  }
+}

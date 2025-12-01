@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- 
+Group Members: Jerald Fisher, Adrian Stevenson, Henoch Totou, Alecia Williams
+Date: 10/28/2025
+File Name: courses.html
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Description of page when using search engine -->
+  <meta name="description"
+    content="These are our available courses for those interested into our program here at NextGen STEM!">
+  <title>Courses | NextGen STEM Leaders</title>
+
+  <!-- Bootstrap CSS framework for layout and components -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Custom site stylesheet -->
+  <link rel="stylesheet" href="css/styles.min.css">
+
+  <!-- jQuery and Bootstrap JS for interactive behavior -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Site favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Page header with screen-reader-only heading for accessibility -->
+  <header>
+    <h2 class="sr-only">Courses - NextGen STEM Leaders</h2>
+  </header>
+
+  <!-- Main navigation bar shared across the site -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Navbar header with brand logo and mobile toggle button -->
+      <div class="navbar-header">
+        <!-- Collapsible hamburger menu for smaller screens -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- Brand logo linking back to the home page -->
+        <a class="navbar-brand" href="index.html">Logo</a>
+      </div>
+
+      <!-- Collapsible navigation links -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <!-- Primary navigation; Courses is the active page -->
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="scholarships.html">Scholarships</a></li>
+          <li class="active"><a href="courses.html">Courses</a></li>
+          <li><a href="mentors.html">Mentors</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Right-aligned login link -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content area for the Courses page -->
+  <main id="main-content">
+    <!-- STEM courses overview section -->
+    <section id="stem-courses" class="container text-center">
+      <h2>STEM Courses</h2>
+      <!-- Introductory description of the course offerings -->
+      <p>
+        Discover a range of beginner-friendly and advanced STEM courses designed
+        to help students explore science, technology, engineering, and mathematics.
+      </p>
+
+      <!-- Row of four course cards, one for each STEM area -->
+      <div class="row">
+        <!-- Science course card -->
+        <article class="col-sm-3">
+          <img src="images/NexGenSTEMLeadersScienceimage.png" alt="Science icon"
+            class="img-responsive center-block stem-icon"><br>
+          <h4>Science Fundamentals</h4><br>
+          <p>
+            Learn the basics of biology, chemistry, and physics through fun,
+            interactive lessons designed for young learners.
+          </p>
+          <ul class="course-list">
+            <li>Introduction to Biology</li>
+            <li>Chemistry Essentials</li>
+            <li>Earth & Space Science</li>
+            <li>Human Body Systems</li>
+            <li>Environmental Science Projects</li>
+          </ul>
+          <p>
+            Students participate in hands-on labs, simple experiments, and guided
+            discovery activities that help build a strong foundation in scientific
+            thinking, observation skills, and understanding of the natural world.
+          </p>
+          <!-- Enroll button linking to the contact form section -->
+          <a href="contact.html#contactformsection" class="btn btn-primary">Enroll Now</a>
+        </article>
+
+        <!-- Technology course card -->
+        <article class="col-sm-3">
+          <img src="images/NexGenSTEMLeadersTechnologyimage.png" alt="Technology icon"
+            class="img-responsive center-block stem-icon"><br>
+          <h4>Technology &amp; Coding</h4><br>
+          <p>
+            Explore programming and technology concepts with beginner-friendly
+            projects using tools like Scratch and Python.
+          </p>
+          <ul class="course-list">
+            <li>Scratch Programming Basics</li>
+            <li>Intro to Python Coding</li>
+            <li>Web Design With HTML/CSS</li>
+            <li>Robotics & Sensors</li>
+            <li>Safe & Responsible Technology Use</li>
+          </ul>
+          <p>
+            This course introduces students to logical thinking, step-by-step
+            problem solving, computer safety, and creativity through a variety of
+            beginner-friendly coding tools and interactive tech challenges.
+          </p>
+
+          <!-- Enroll button linking to the contact form section -->
+          <a href="contact.html#contactformsection" class="btn btn-primary">Enroll Now</a>
+        </article>
+
+        <!-- Engineering course card -->
+        <article class="col-sm-3">
+          <img src="images/NexGenSTEMLeadersEngineeringimage.png" alt="Engineering icon"
+            class="img-responsive center-block stem-icon"><br>
+          <h4>Engineering Challenges</h4><br>
+          <p>
+            Put your problem-solving skills to the test with creative, hands-on
+            engineering activities using everyday materials.
+          </p>
+          <ul class="course-list">
+            <li>Simple Machines & Mechanical Design</li>
+            <li>Bridge-Building & Structural Engineering</li>
+            <li>Renewable Energy Systems</li>
+            <li>Water Filtration & Environmental Engineering</li>
+            <li>Engineering Design Process Workshops</li>
+          </ul>
+          <p>
+            Learners explore real-world engineering concepts through project-based
+            activities that develop teamwork, creativity, and innovation. Students
+            design, build, test, and iterate using accessible materials.
+          </p>
+
+          <!-- Enroll button linking to the contact form section -->
+          <a href="contact.html#contactformsection" class="btn btn-primary">Enroll Now</a>
+        </article>
+
+        <!-- Mathematics course card -->
+        <article class="col-sm-3">
+          <img src="images/NexGenSTEMLeadersMathimage.png" alt="Mathematics icon"
+            class="img-responsive center-block stem-icon"><br>
+          <h4>Mathematics in Action</h4><br>
+          <p>
+            Build confidence with numbers, patterns, and problem-solving through
+            real-world math activities connected to STEM.
+          </p>
+          <ul class="course-list">
+            <li>Algebra in the Real World</li>
+            <li>Geometry Through Art & Design</li>
+            <li>Introduction to Data & Statistics</li>
+            <li>Patterns, Sequences, & Logic</li>
+            <li>Financial Literacy for Students</li>
+          </ul>
+          <p>
+            This course helps students understand the power of math in everyday
+            problem-solving. Through puzzles, STEM-based activities, and applied
+            math challenges, learners build confidence and critical-thinking skills.
+          </p>
+
+          <!-- Enroll button linking to the contact form section -->
+          <a href="contact.html#contactformsection" class="btn btn-primary">Enroll Now</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global footer with contact info and NC A&T link -->
+  <footer>
+    <div class="inner-foot-container">
+      <div class="copyright">
+        <p style="color:white; text-align: center;">NextGen STEM Leaders</p>
+        <p style="color:white; text-align: center;">&copy; Copyright 2025. All Right Reserved.</p>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/home.php" target="_blank"><img src="images/Facebook_Logo_Primary.png"
+            alt="Facebook logo, white and blue." title="Facebook logo, white and blue." height="30"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/Instagram_Glyph_Gradient.png"
+            alt="Instagram logo, black and purple gradients." title="Instagram logo, black and purple gradients."></a>
+      </div>
+      <div class="resources">
+        <p><a href="mailto:info@NextGen.com" style="color:white;">info@NextGen.com</a></p>
+        <p><a href="https://www.ncat.edu/" style="color:white;">North Carolina A&T</a></p>
+        <a href="indexBP.html">View Alternate Version</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
